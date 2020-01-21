@@ -1,0 +1,13 @@
+﻿@inject IConfiguration configuration
+
+@{
+    ViewData["Title"] = "ReadConnectionString";
+}
+
+<h1>ReadConnectionString</h1>
+
+
+ConnectionString資訊如下:
+<ul>
+    <li>ConnectionString : @(configuration.GetValue<string>("ConnectionStrings:DatabaseContext"))</li>
+</ul>

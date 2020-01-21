@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "SimpleCard";
+}
+
+
+    <div class="jumbotron bg-info text-center">
+        <h2>人物牌卡(簡單型)</h2>
+    </div>
+
+    <div class="row">
+        <partial name="_SimpleCardPartial" />    
+        @await Html.PartialAsync("_SimpleCardPartial")
+    </div>
+

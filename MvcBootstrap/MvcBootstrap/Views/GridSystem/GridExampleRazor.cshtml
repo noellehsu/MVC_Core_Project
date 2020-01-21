@@ -1,0 +1,52 @@
+﻿@using System.Text;
+
+@{
+    ViewBag.Title = "GridExampleRazor";
+}
+
+<div class="jumbotron alert-success">
+    <h3>Grid System中的版面配置</h3>
+    <p>利用.col-md-1, .col-md-2 ~ .col-md-12進行版面配置</p>
+</div>
+
+@Html.Partial("ColumnHeaderPartial")
+
+<div class="alert alert-info">將版面等分為兩欄</div>
+
+<div class="row">
+    <div class="col-md-6">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-6">@Html.Partial("ArticlePartial")</div>
+</div>
+
+
+<div class="alert alert-info">將版面等分為三欄</div>
+<div class="row">
+    <div class="col-md-4">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-4">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-4">@Html.Partial("ArticlePartial")</div>
+
+</div>
+
+<div class="alert alert-info">將版面等分為四欄</div>
+<div class="row">
+    <div class="col-md-3">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-3">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-3">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-3">@Html.Partial("ArticlePartial")</div>
+
+</div>
+
+<div class="alert alert-info">將版面分為三欄,但每欄寬度不等</div>
+<div class="row">
+    <div class="col-md-3">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-4">@Html.Partial("ArticlePartial")</div>
+    <div class="col-md-5">@Html.Partial("ArticlePartial")</div>
+</div>
+
+
+@section topCSS{
+<link href="~/Assets/css/GridColumns.css" rel="stylesheet" />
+}
+
+
+

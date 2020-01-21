@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MvcRazor.Models.Card>
+
+@{
+    ViewBag.Title = "CardPartialView";
+}
+
+<div class="jumbotron">
+    <h2>人物牌卡(動態資料產生)</h2>
+</div>
+
+<div class="row">
+    @foreach (var man in Model)
+    {
+        @Html.Partial("_CardPartial", man);
+    }
+</div>
+
+@section topCSS{
+<link href="~/Assets/css/card.css" rel="stylesheet" />
+}

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "ImageUrl";
+}
+
+@{
+    var httpUrl = "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_4.jpg";
+
+    var imageRelativePath = "~/Assets/images/SteveJobs.jpg";
+
+    var image1 = @"../Assets/images/DarthMual.jpg";
+    var image2 = "Assets/images/DarthMual.jpg";
+    var image3 = @"DarthMual.jpg";
+    var image4 = "/MvcRazor/Assets/images/DarthMual.jpg";
+}
+<img src="~/Assets/images/SteveJobs.jpg" />
+
+<img src="@image1" style="width:300px;height:auto;" alt="image1" />
+<img src="~/@image2" style="width:300px;height:auto;" alt="image2" />
+<img src="~/Assets/images/@image3" style="width:300px;height:auto;" alt="image3" />
+<img src="@image4" style="width:300px;height:auto;" alt="image4" />
+
+
+    <!--16.Web圖檔路徑表示法-->
+<div class="alert alert-info">規則16：Web圖檔路徑的調整</div>
+
+<!--直接正常呈現-->
+<p>@httpUrl</p>
+<img src=@httpUrl alt="Sona" />
+<img src="~/Assets/images/Vader.jpg" />
+
+<hr />
+
+<img src="@image1" alt="image1" />
+<img src="~/@image2" alt="image2" />
+<img src="~/Assets/images/@image3" alt="image3" />
+<img src="@image4" alt="image4" />
+
+@section topCSS{
+<style>
+    img{
+        width:300px;
+        height:auto;
+    }
+</style>    
+}

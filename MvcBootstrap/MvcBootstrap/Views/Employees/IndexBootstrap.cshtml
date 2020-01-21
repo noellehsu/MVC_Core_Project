@@ -1,0 +1,114 @@
+﻿@model IEnumerable<MvcBootstrap.Models.Employee>
+
+@{
+    ViewBag.Title = "IndexBootstrap";
+}
+
+<!--
+<style type="text/css">
+    /*設定Table欄位標題顏色*/
+    th {
+        color: white;
+        background-color: black;
+        text-align: center;
+    }
+
+    /*設定Table資料列Hover時的光棒效果*/
+    .table > tbody > tr:hover {
+        background-color: antiquewhite;
+    }
+</style>-->
+
+@section topCSS{
+    <style type="text/css">
+        /*設定Table欄位標題顏色*/
+        th {
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+
+        /*設定Table資料列Hover時的光棒效果*/
+        .table > tbody > tr:hover {
+            background-color: antiquewhite;
+        }
+    </style>
+}
+
+
+@section endJS{
+    <script type="text/javascript">
+        function showName(name) {
+            alert("Your name is :" + name);
+        }
+    </script>
+}
+
+<div class="jumbotron alert-success">
+    <h2>員工基本資料</h2>
+</div>
+
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            <div class="glyphicon glyphicon-th-list"></div>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            <div class="glyphicon glyphicon-user"></div>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            <div class="glyphicon glyphicon-phone"></div>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            <div class="glyphicon glyphicon-envelope"></div>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            <div class="glyphicon glyphicon-home"></div>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            <div class="glyphicon glyphicon-king"></div>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td class="text-center">
+                @Html.ActionLink("編輯", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("明細", "Details", new { id = item.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink("刪除", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    @Html.ActionLink("新增員工資料", "Create", null, new { @class = "btn btn-warning" })
+</p>

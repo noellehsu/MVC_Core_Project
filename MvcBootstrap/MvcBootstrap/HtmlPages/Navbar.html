@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile First -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- html5shiv.js讓IE 8支援HTML5 elements-->
+    <!--<script src="../Scripts/html5shiv.min.js"></script>-->
+    <!-- Respond.js讓IE 8支援media queries -->
+    <script src="../Scripts/respond.js"></script>
+    <!--<title>第一個Bootstrap</title>-->
+
+    <title>Bootstrap基本語法</title>
+    <style type="text/css">
+        p + div.alert.alert-info{
+            text-align:center;
+            font-size:larger;
+            font-weight:900;
+            border:2px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <!--Bootstrap的container-->
+    <div class="container">
+        <!--Navbar-->
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header row">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        Bootstrap語法
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">產品</a></li>
+                        <li><a href="#">關於</a></li>
+                        <li><a href="#">客服</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!--Navbar-->
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header row">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse2">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        Bootstrap語法
+                    </a>
+                </div>
+                <div class="navbar-collapse2 collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">產品</a></li>
+                        <li><a href="#">關於</a></li>
+                        <li><a href="#">客服</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+<!--    <script src="../Scripts/jquery-1.10.2.min.js"></script>-->
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MvcRazor.Models.Project>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron alert-success">
+    <h2>各章ASP.NET MVC專案程式</h2>
+</div>
+
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Chapter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Program)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Chapter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Program)
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">@MyFunctions.getBookTitle()</td>
+        </tr>
+    </tfoot>
+</table>
+
+@section topCSS{
+    <link href="~/Assets/css/myCSS.css" rel="stylesheet" />
+}

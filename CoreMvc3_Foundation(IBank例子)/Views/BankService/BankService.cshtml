@@ -1,0 +1,18 @@
+﻿@inject IBankService bankService
+
+
+@{
+    ViewData["Title"] = "BankService";
+}
+
+<h1>BankService</h1>
+
+<ul>
+    <li>Bank Id: @bankService.BankId</li>
+    <li>Bank Name: @bankService.BankName</li>
+    <li>Balance: @bankService.AccountBalance(12386)</li>
+    <li>Withdraw: @bankService.Withdraw(5000)</li>
+    <li>Deposite: @bankService.Deposit(12000)</li>
+</ul>
+
+

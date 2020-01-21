@@ -1,0 +1,51 @@
+﻿@*@inherits System.Web.Mvc.WebViewPage<IEnumerable<MvcRazor.Models.Score>>*@
+@model IEnumerable<MvcRazor.Models.Score>
+
+@{
+    ViewBag.Title = "學生期中考成績";
+}
+
+<div class="jumbotron">
+    <h2>學生期中考成績</h2>
+</div>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id))</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Chinese)</th>
+            <th>@Html.DisplayNameFor(model => model.English)</th>
+            <th>@Html.DisplayNameFor(model => model.Math)</th>
+            <th>@Html.DisplayNameFor(model => model.Total)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <!--計算每個學生的三科成績加總-->
+            <!--這是全然在View以Razor計算, Controller不做任何計算-->
+            var total = item.Chinese + item.English + item.Math;
+            
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Chinese)</td>
+                <td>@Html.DisplayFor(modelItem => item.English)</td>
+                <td>@Html.DisplayFor(modelItem => item.Math)</td>
+                <td>@total</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section topCSS{
+    <style type="text/css">
+        /*設定Table欄位標題顏色*/
+        th {
+            color: white;
+            background-color:#36acfa;
+            text-align: center;
+        }
+    </style>
+}

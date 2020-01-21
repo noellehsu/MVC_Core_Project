@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@functions{
+    public IHtmlString GetHello()
+    {
+        return new HtmlString("<a href='http://www.asp.net/mvc'>Hello MVC</a>");
+    }
+}
+
+
+<h2>Index</h2>
+@GetHello()

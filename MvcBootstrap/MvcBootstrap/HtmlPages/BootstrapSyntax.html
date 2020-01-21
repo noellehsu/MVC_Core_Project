@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile First -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- html5shiv.js讓IE 8支援HTML5 elements-->
+    <!--<script src="../Scripts/html5shiv.min.js"></script>-->
+    <!-- Respond.js讓IE 8支援media queries -->
+    <script src="../Scripts/respond.js"></script>
+    <!--<title>第一個Bootstrap</title>-->
+
+    <title>Bootstrap基本語法</title>
+    <style type="text/css">
+        p + div.alert.alert-info{
+            text-align:center;
+            font-size:larger;
+            font-weight:900;
+            border:2px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <!--Bootstrap的container-->
+    <div class="container">
+        <!--Navbar-->
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header row">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        Bootstrap語法
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">產品</a></li>
+                        <li><a href="#">關於</a></li>
+                        <li><a href="#">客服</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Jumbotron超大螢幕-->
+        <div class="jumbotron" id="jumbotron">
+            <h1>Jumbotron超大螢幕</h1>
+            <p class="text-success">Bootstrap基本語法解說，包括Bootstrap樣式及元件的應用</p>
+            <p><a class="btn btn-primary btn-lg" href="http://getbootstrap.com/" role="button">Bootstrap官網</a></p>
+        </div>
+
+        <!--Panel元件-->
+        <p id="panel">
+            <div class="alert alert-info">Panel元件</div>
+        </p>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h4 class="text-center">神力女超人</h4></div>
+            <div class="panel-body">
+                <img src="../Assets/images/wonderwoman.jpg" alt=""/>
+                <p class="text-success">
+                    《神力女超人》是由美國漫畫大廠DC Comics推出的年度大作，由
+                    蓋兒加朵飾演亞馬遜族的公主戴安娜，自幼生長在與世隔絕的天堂島，
+                    當她得知世界正經歷一場大戰，她決定挺身而出為正義而戰。
+                </p>
+            </div>
+            <div class="panel-footer alert-danger">蓋兒·加朵主演</div>
+        </div>
+
+        <!--Button-->
+        <p id="button">
+            <div class="alert alert-info">套用Bootstrap的Button樣式</div>
+            <button type="button" class="btn">Button</button>
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button>
+        </p>
+
+
+        <!--Glyphicons字型圖示-->
+        <p id="glyphicon">
+            <div class="alert alert-info">Glyphicon字型圖示</div>
+            <div>
+                <span class="glyphicon glyphicon-home"></span>
+                <span class="glyphicon glyphicon-user"></span>
+                <span class="glyphicon glyphicon-search"></span>
+                <span class="glyphicon glyphicon-envelope"></span>
+                <span class="glyphicon glyphicon-info-sign"></span>
+                <span class="glyphicon glyphicon-cog"></span>
+            </div>
+        </p>
+
+        <!--Label元件-->
+        <p id="label">
+            <div class="alert alert-info">Label元件</div>
+            <div>
+                <h5>Angular 4<span class="label label-danger">New</span></h5>
+                <h5>MVC<span class="label label-success">Stable</span></h5>
+                <h5>Bootstrap 4<span class="label label-primary">Coming soon</span></h5>
+                <h5>HTML5<span class="label label-info">Ready</span></h5>
+                <h5>CSS3<span class="label label-default">Ready</span></h5>
+                <h5>C3.js<span class="label label-warning">Ready</span></h5>          
+            </div>
+        </p>
+
+        <!--input-group元件-->
+        <p id="input-group">
+            <div class="alert alert-info">input-group元件</div>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Your Name." aria-describedby="basic-addon1">
+                <span class="input-group-addon">姓名</span>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-phone-alt"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Your Phone No." aria-describedby="basic-addon2">
+                <span class="input-group-addon">手機</span>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Your Email." aria-describedby="basic-addon3">
+                <span class="input-group-addon">電郵</span>
+            </div>
+        </p>
+
+        <!--Badge元件-->
+        <p id="badge">
+            <div class="alert alert-info">Badge元件</div>
+            <span class="badge">這是Badge</span>
+            <a href="#">Inbox <span class="badge">10</span></a>
+
+            <button class="btn btn-warning" type="button">
+                Messages <span class="badge">5</span>
+            </button>
+        </p>
+
+        <!--Alert元件-->
+        <p id="alert">
+            <div class="alert alert-info">Alert警示訊息元件</div>
+            <div class="alert alert-success" role="alert">靡恃己長 信使可復 器欲難量 莫悲絲染 詩讚羔羊</div>
+            <div class="alert alert-info" role="alert">景行惟賢 克念作聖 德建名立 形端表正 空谷傳聲</div>
+            <div class="alert alert-warning" role="alert">虛堂習聽 禍因惡積 福緣善慶 尺璧非寶 寸陰是競</div>
+            <div class="alert alert-danger" role="alert">資父事君 曰言與敬 孝當竭力 忠則盡命 臨深履薄</div>
+        </p>
+
+        <!--Badge結合Alert -->
+        <p id="badgealert">
+            <div class="alert alert-info"> Badge結合Alert</div>
+            <span class="badge alert-info">Badge</span>
+            <span class="badge alert-danger">Badge</span>
+            <span class="badge alert-success">Badge</span>
+            <span class="badge alert-warning">Badge</span>
+        </p>
+
+        <!--Contextual colors情境文字顏色-->
+        <p id="textcolor">
+            <div class="alert alert-info">情境文字顏色</div>
+            <div>
+                <div class="text-primary">尚未收到您這個月的信用卡費用，請速繳納，以免愈期產生利息。</div>
+                <div class="text-muted">若您已繳款，請毋需理會此訊息。</div>
+                <div class="text-success">轉帳成功！帳款於次日會匯入對方帳戶。</div>
+                <div class="text-info">此為提示訊息！您的密碼已超過一年未更換了，請盡速變更。</div>
+                <div class="text-warning">警告！ATM提款機不具備退款功能,，請勿受騙。</div>
+                <div class="text-danger">系統錯誤！發生嚴重不可回復之錯誤，請連絡管理員。</div>
+            </div>
+        </p>
+
+
+        <!--Contextual backgrounds情境背景顏色-->
+        <p id="bgcolor">
+            <div class="alert alert-info">情境背景顏色</div>
+            <div>
+                <div class="bg-primary">天地玄黃 宇宙洪荒 日月盈昃 辰宿列張 寒來暑往</div>
+                <div class="bg-success">秋收冬藏 閏餘成歲 律呂調陽 雲騰致雨 露結為霜</div>
+                <div class="bg-info">金生麗水 玉出崑岡 劍號巨闕 珠稱夜光 果珍李柰</div>
+                <div class="bg-warning">菜重芥薑 海鹹河淡 麟潛羽翔 龍獅火帝 鳥官人皇</div>
+                <div class="bg-danger">始制文字 乃服衣裳 推位讓國 有虞陶唐 弔民伐罪</div>
+            </div>
+        </p>
+
+
+        <!--情境背景顏色 +　文字顏色-->
+        <p>
+            <div class="alert alert-info">情境背景顏色 + 文字顏色</div>
+            <div>
+                <div class="text-muted bg-danger">秋收冬藏 閏餘成歲 律呂調陽 雲騰致雨 露結為霜</div>
+                <div class="text-danger bg-success">金生麗水 玉出崑岡 劍號巨闕 珠稱夜光 果珍李柰</div>
+                <div class="text-warning bg-info">菜重芥薑 海鹹河淡 麟潛羽翔 龍獅火帝 鳥官人皇</div>
+                <div class="text-info bg-warning">始制文字 乃服衣裳 推位讓國 有虞陶唐 弔民伐罪</div>
+                <div class="text-primary bg-danger">周發商湯 坐朝問道 垂拱平章 愛育黎首 臣伏戎羌</div>
+            </div>
+        </p>
+
+        <p id="textalign">
+            <div class="alert alert-info">文字對齊</div>
+        </p>
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <h4>文字對齊範例</h4>
+            </div>
+            <div class="panel-body">
+                <p class="text-left">文字靠左對齊</p>
+                <p class="text-center">文字置中對齊</p>
+                <p class="text-right">文字靠右對齊</p>
+                <p class="text-justify">文字左右對齊</p>
+                <p class="text-nowrap">文字不換行</p>
+            </div>
+        </div>
+
+        <p id="table">
+            <div class="alert alert-info">Table表格</div>
+            <table class="table table-bordered table-striped">
+                <thead class="bg-primary">
+                    <tr>
+                        <th>產品名稱</th>
+                        <th>產品編號</th>
+                        <th>容量</th>
+                        <th>單價</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INTEL Intel 600P 512G SSD</td>
+                        <td>SSDPEKKW512G7X1</td>
+                        <td>512GB</td>
+                        <td>5,499</td>
+                    </tr>
+                    <tr>
+                        <td>Kingston 240G SSD</td>
+                        <td>HyperX Savage SHSS37A</td>
+                        <td>240GB</td>
+                        <td>3,645</td>
+                    </tr>
+                    <tr>
+                        <td>Micron Crucial 525GB SSD </td>
+                        <td>MX300</td>
+                        <td>525GB</td>
+                        <td>4,588</td>
+                    </tr>
+                </tbody>
+                <tfoot class="bg-info">
+                    <tr>
+                        <td colspan="4" class="text-center">SSD固態硬碟</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </p>
+
+        <!--Dropdown元件-->
+        <p id="dropdown">
+            <div class="alert alert-info">Dropdown元件</div>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    3C電子產品下拉選單
+                    <span class="caret"></span>
+                </button>
+                <!--下拉項目-->
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">電腦</a></li>
+                    <li><a href="#">LCD螢幕</a></li>
+                    <li><a href="#">數位相機</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">手機</a></li>
+                    <li><a href="#">平板電腦</a></li>
+                </ul>
+            </div>
+        </p>
+
+        <!--List group元件-->
+        <p id="listgroup">
+            <div class="alert alert-info">List Group元件</div>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info">
+                    上級交辦事項
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    客服案件
+                </li>
+                <li class="list-group-item list-group-item-danger">
+                    待處理事項
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            <div class="alert alert-info">List Group元件 + Badge</div>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info">
+                    <span class="badge">3</span>
+                    上級交辦事項
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="badge">16</span>
+                    客服案件
+                </li>
+                <li class="list-group-item list-group-item-danger">
+                    <span class="badge">8</span>
+                    待處理事項
+                </li>
+            </ul>
+        </p>
+
+        <!--Nav-Tabs-->
+        <p>
+            <div class="alert alert-info">Tabs元件</div>
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
+        </p>
+    </div>
+
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <!--<script src="../Scripts/jquery-1.10.2.min.js"></script>-->
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿@using Microsoft.Extensions.Configuration
+
+
+@{
+    ViewData["Title"] = "ReadFriends";
+}
+
+<h1>ReadFriends</h1>
+
+Friend資訊如下:@*相依性注入我寫在ConfigController裡面的ReadFriends，這邊不用寫*@
+<ul>
+    <li> Name:  @ViewData["Name"]  </li>
+    <li> Email: @ViewData["Email"]  </li>
+    <li> Mobile: @ViewData["Mobile"]  </li>
+
+
+</ul>

@@ -1,0 +1,15 @@
+﻿
+@inject IConfiguration configuration
+
+@{
+    ViewData["Title"] = "ReadAppsettings";
+}
+
+<h1>ReadAppsettings</h1>
+
+Developer資訊如下:
+<ul>
+    <li>Name : @(configuration.GetValue<string>("Developer:Name"))</li>
+    <li>Email: @(configuration.GetValue<string>("Developer:Email", "找不到Email"))</li>
+    <li>Website: @(configuration.GetSection("Developer:Website").Value)</li>
+</ul>
